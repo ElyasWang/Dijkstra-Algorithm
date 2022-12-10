@@ -8,7 +8,7 @@ Jupyter Notebook
 
 ## Description
 
-Using a simplified running schedule, get the adjacency list and use the algorithm to find the fastest route to the destination.
+Using a simplified running schedule, get the adjacency list and use Dijkstra algorithm to find the fastest route to the destination.
 
 ### Inputs:   
 running schedule
