@@ -20,5 +20,7 @@ destination station
 travel-start time
 
 ### Output:   
-The fastest route and the arrival time at each station.
+fastest route 
+
+arrival time at each station.
 
