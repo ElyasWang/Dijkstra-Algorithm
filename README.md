@@ -12,8 +12,11 @@ Using a simplified running schedule, get the adjacency list and use the algorith
 
 ### Inputs:   
 running schedule
+
 departure station
+
 destination station
+
 travel-start time
 
 ### Output:   
