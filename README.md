@@ -10,11 +10,11 @@ Jupyter Notebook
 
 Using a simplified running schedule, get the adjacency list and use Dijkstra algorithm to find the fastest route to the destination.
 
-**Traffic Network Model.ipynb**A simplified traffic network model is described.
+**Traffic Network Model.ipynb**: A simplified traffic network model is described.
 
-**Adjacency List.ipynb**Algorithm for finding the adjacency list in the model.
+**Adjacency List.ipynb**: Algorithm for finding the adjacency list in the model.
 
-**Find Shortest Path.ipynb**The fastest route was found by Dijkstra's algorithm.
+**Find Shortest Path.ipynb**: The fastest route was found by Dijkstra's algorithm.
 
 ### Inputs:   
 running schedule
