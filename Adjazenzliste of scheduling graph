@@ -1,0 +1,34 @@
+from typing import List, Tuple
+
+def generate_graph(schedules:List[List[List[int]]]) -> List[List[Tuple[int, int, float]]]:
+    """Function to generate a scheduling graph from a list of schedules. The scheduling graph is returned as
+    adjacency lists [(destination, start_time, arrival_time)]. 
+    In a graph of three nodes 0, 1 and 2 with the edges 0->1 from 8 to 10.42, 0->1 from 11 to 12,
+    1->2 from 11 to 13.37 and 1->0 from 8 to 17, the respective representation would look as follows:
+    [[(1, 8, 10.42), (1, 11, 12)], [(2, 11, 13.37), (0, 8, 17)]]"""
+    tuple_tmp=Tuple[int, int, float]
+    #   init of output: adjazenzliste
+    adjazenzliste = []
+    #   size of input list
+    len_list = len(schedules)
+    #  Iterate through each starting stations
+    for start in range(len_list):                               
+        list_tmp = []
+        #   Iterate through each destination stations
+        for destination in range(len_list): 
+            #   Iterate through 24 hours                          
+            for start_time in range(24): 
+                #   Find the hour of start                            
+                if schedules[start][destination][start_time] != float('inf'): 
+                    #   Calculate arrival time     
+                    arrival_time = start_time + schedules[start][destination][start_time]   
+                    #   Give up cross-day schedule             
+                    if arrival_time < 24:   
+                        #   Record (destination, start_time, arrival_time) into tuple                           
+                        tuple_tmp = (destination,start_time,arrival_time)  
+                        #   Record tuple into list               
+                        list_tmp.append(tuple_tmp)           
+        # if len(out_tmp):
+        #     adjazenzliste.append(out_tmp)
+        adjazenzliste.append(list_tmp)                              
+    return adjazenzliste
